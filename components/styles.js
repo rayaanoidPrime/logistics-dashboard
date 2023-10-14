@@ -60,6 +60,7 @@ const styles = StyleSheet.create({
         backgroundColor: colours.oxford_blue['400'],
         padding: 15,
         borderRadius: 20,
+        marginVertical: 15,
     },
     title: {
         color: '#FFFFFF',
