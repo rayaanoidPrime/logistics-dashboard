@@ -5,10 +5,9 @@ import DeliveriesScreen from '../../screens/deliveriesScreen';
 import DriversScreen from '../../screens/driversScreen';
 import NotificationsScreen from '../../screens/notificationScreen';
 import BranchesScreen from '../../screens/branchesScreen';
-import styles from '../styles';
 import colours from '../colours';
 import { ShypLabel } from '../shypLabel';
-import CustomDrawerIcon from '../customDrawerIcon';
+import { CustomDrawerIcon } from '../customDrawerIcon';
 
 const Drawer = createDrawerNavigator();
 
@@ -32,6 +31,7 @@ const DrawerNavigator = () => {
                 drawerLabelStyle: {
                     color: colours.french_gray['600'],
                 },
+                headerStyle: {},
             }}
             drawerContent={(props) => <CustomDrawerContent {...props} />}
             initialRouteName="Dashboard"

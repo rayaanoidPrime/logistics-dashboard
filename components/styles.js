@@ -11,7 +11,6 @@ const calculatedPaddingTop = statusBarHeight + 5;
 const styles = StyleSheet.create({
     MainContainer: {
         flex: 1,
-        padding: 2,
         paddingTop: calculatedPaddingTop,
         backgroundColor: colours.oxford_blue['500'],
     },
@@ -37,6 +36,45 @@ const styles = StyleSheet.create({
     icon: {
         width: 30,
         height: 32,
+    },
+    dashIcon: {
+        width: 40,
+        height: 40,
+    },
+    dashboardContainer: {
+        flex: 1,
+        padding: 10,
+        backgroundColor: colours.oxford_blue['200'],
+        height: ScreenHeight,
+        alignItems: 'center',
+    },
+    OverviewContainer: {
+        flex: 1,
+        padding: 20,
+    },
+    overviewCard: {
+        flex: 1,
+        flexDirection: 'row',
+        width: 350,
+        maxHeight: 100,
+        backgroundColor: colours.oxford_blue['400'],
+        padding: 15,
+        borderRadius: 20,
+    },
+    title: {
+        color: '#FFFFFF',
+        fontSize: 25,
+        marginBottom: 10,
+    },
+    col: {
+        flex: 1,
+    },
+    cardTitle: {
+        color: colours.french_gray['400'],
+    },
+    cardIcon: {
+        justifyContent: 'center',
+        marginRight: 20,
     },
 });
 
