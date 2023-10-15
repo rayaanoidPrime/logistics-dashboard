@@ -10,7 +10,7 @@ export default function App() {
         <NavigationContainer>
             <MainContainer>
                 <StatusBar style="light" />
-                <DrawerNavigator></DrawerNavigator>
+                <DrawerNavigator />
             </MainContainer>
         </NavigationContainer>
     );

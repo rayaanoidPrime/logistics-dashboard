@@ -1,6 +1,7 @@
 import { View } from 'react-native';
 import styles from '../components/styles';
-import OverviewCard from '../components/overview';
+import OverviewCard from '../components/overviewCard';
+import RevenueCard from '../components/revenueCard';
 
 const Dashboard = () => {
     return (
