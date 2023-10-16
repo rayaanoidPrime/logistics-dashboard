@@ -31,6 +31,7 @@ const RevenueCard = () => {
                         setSelectedValue(value);
                         setDataKey(id);
                     }}
+                    iconWidth={20}
                 />
             </View>
             <View

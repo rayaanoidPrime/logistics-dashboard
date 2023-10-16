@@ -12,7 +12,7 @@ const styles = StyleSheet.create({
     MainContainer: {
         flex: 1,
         paddingTop: calculatedPaddingTop,
-        backgroundColor: colours.oxford_blue['500'],
+        backgroundColor: colours.oxford_blue['200'],
     },
     text: {
         color: '#FFFFFF',
@@ -161,7 +161,7 @@ const styles = StyleSheet.create({
         height: 15,
         tintColor: colours.slate_blue['700'],
         alignSelf: 'center',
-        marginLeft: 5,
+        marginLeft: 15,
     },
     cellStyle: {
         width: 100,

@@ -1,6 +1,7 @@
 import { View, Text } from 'react-native';
 import { CustomIcon } from './customDrawerIcon';
 import styles from './styles';
+import DriverItem from './driverItem';
 
 const DriverCard = () => {
     return (
@@ -15,10 +16,29 @@ const DriverCard = () => {
             <View
                 style={{
                     flex: 1,
-                    alignSelf: 'center',
-                    paddingVertical: 20,
+                    paddingTop: 20,
+                    gap: 20,
                 }}
-            ></View>
+            >
+                <DriverItem
+                    name={'Ajala O.'}
+                    msg={'3 packages being delivered'}
+                    imgPath={require('../assets/driv.jpg')}
+                    iconPath={require('../assets/pin.png')}
+                />
+                <DriverItem
+                    name={'Salilu K.'}
+                    msg={'2 packages being delivered'}
+                    imgPath={require('../assets/driv.jpg')}
+                    iconPath={require('../assets/pin.png')}
+                />
+                <DriverItem
+                    name={'Tayo L.'}
+                    msg={'4 packages being delivered'}
+                    imgPath={require('../assets/driv.jpg')}
+                    iconPath={require('../assets/pin.png')}
+                />
+            </View>
         </View>
     );
 };

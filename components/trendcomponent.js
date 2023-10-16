@@ -1,9 +1,8 @@
 import React from 'react';
 import { View, Text, Image } from 'react-native';
-import styles from './styles'; // Import your styles
+import styles from './styles';
 
 const TrendComponent = ({ type, value, duration }) => {
-    // Define icons for 'Up' and 'Down'
     const icons = {
         Up: require('../assets/up.png'),
         Down: require('../assets/down.png'),

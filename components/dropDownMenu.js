@@ -1,9 +1,18 @@
 import React, { useState } from 'react';
 import { View, Text, TouchableOpacity, FlatList } from 'react-native';
 import styles from './styles';
-import colours from './colours';
-
-const CustomDropdown = ({ items, selectedValue, onSelect }) => {
+import { CustomIcon } from './customDrawerIcon';
+const CustomDropdown = ({
+    items,
+    selectedValue,
+    onSelect,
+    itemStyle = [],
+    containerStyle = [],
+    btnStyle = [],
+    btntextStyle = [],
+    itemTextStyle = [],
+    iconWidth,
+}) => {
     const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
     const toggleDropdown = () => {
@@ -11,24 +20,32 @@ const CustomDropdown = ({ items, selectedValue, onSelect }) => {
     };
 
     return (
-        <View>
-            <TouchableOpacity style={styles.dropdownButton} onPress={toggleDropdown}>
-                <Text style={styles.dropdownButtonText}>{selectedValue}</Text>
+        <View style={{ alignSelf: 'center' }}>
+            <TouchableOpacity style={[styles.dropdownButton, ...btnStyle]} onPress={toggleDropdown}>
+                <View style={{}}>
+                    <Text style={[styles.dropdownButtonText, ...btntextStyle]}>
+                        {selectedValue}
+                        <CustomIcon
+                            style={[{ width: iconWidth, height: 16, tintColor: colours.slate_blue['600'] }]}
+                            imagePath={require('../assets/drop.png')}
+                        />
+                    </Text>
+                </View>
             </TouchableOpacity>
             {isDropdownOpen && (
-                <View style={styles.dropDownContentContainer}>
+                <View style={[styles.dropDownContentContainer, ...containerStyle]}>
                     <FlatList
                         data={items}
                         keyExtractor={(item) => item.value.toString()}
                         renderItem={({ item }) => (
                             <TouchableOpacity
-                                style={styles.dropdownItem}
+                                style={[styles.dropdownItem, ...itemStyle]}
                                 onPress={() => {
                                     onSelect(item);
                                     toggleDropdown();
                                 }}
                             >
-                                <Text style={styles.dropDownItemText}>{item.label}</Text>
+                                <Text style={[styles.dropDownItemText, ...itemTextStyle]}>{item.label}</Text>
                             </TouchableOpacity>
                         )}
                     />
